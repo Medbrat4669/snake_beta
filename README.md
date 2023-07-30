@@ -15,10 +15,10 @@
 ``` git clone <название репозитория> ```
 - Установите и активируйте виртуальное окружение:  
 ```python -m venv venv ```  
-
-```windows: source venv/Scripts/activate ```
-
-```mac os: source venv/bin/activate ```
+- Для windows:
+```source venv/Scripts/activate ```
+- Для mac os
+```source venv/bin/activate ```
 - Установите зависимости из файла requirements.txt:
 ``` pip install -r requirements.txt ```
 - Перейдите в папку snake_beta.
