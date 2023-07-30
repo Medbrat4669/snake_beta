@@ -4,8 +4,6 @@ import random
 
 pygame.init()
 
-white = (255, 255, 255)
-yellow = (255, 255, 102)
 black = (0, 0, 0)
 brown = (139, 69, 19)
 orange = (255, 165, 0)
@@ -20,7 +18,11 @@ clock = pygame.time.Clock()
 snake_block = 10
 snake_speed = 15
 font_style = pygame.font.SysFont("bahnschrift", 25) #размер шрифта
-score_font = pygame.font.SysFont("comicsansms", 35) #шрифт счета
+score_font = pygame.font.Font("F77Minecraft.ttf", 20) #шрифт счета
+
+def your_score(score):
+   value = score_font.render("Ваш счёт: " + str(score), True, brown)
+   dis.blit(value, [0, 0])
 
 
 def our_snake(snake_block, snake_list):
@@ -50,6 +52,7 @@ def gameLoop():
         while game_close == True:
             dis.fill(beige)
             message("Потрачено! Нажмите ESC для выхода или Space для повторной игры", brown)
+            your_score(length_of_snake - 1)
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -94,6 +97,7 @@ def gameLoop():
             if x == snake_head:
                game_close = True
         our_snake(snake_block, snake_list)
+        your_score(length_of_snake - 1)
         pygame.display.update()
         if x1 == food_x and y1 == food_y:
             food_x = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
