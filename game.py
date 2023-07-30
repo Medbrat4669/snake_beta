@@ -63,19 +63,17 @@ def gameLoop():
                         gameLoop()
         
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                game_over = True
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+                if event.key == pygame.K_LEFT and x1_change != snake_block:
                     x1_change = -snake_block
                     y1_change = 0
-                elif event.key == pygame.K_RIGHT:
+                elif event.key == pygame.K_RIGHT and x1_change != -snake_block:
                     x1_change = snake_block
                     y1_change = 0
-                elif event.key == pygame.K_UP:
+                elif event.key == pygame.K_UP and y1_change != snake_block:
                     y1_change = -snake_block
                     x1_change = 0
-                elif event.key == pygame.K_DOWN:
+                elif event.key == pygame.K_DOWN and y1_change != -snake_block:
                     y1_change = snake_block
                     x1_change = 0
 
