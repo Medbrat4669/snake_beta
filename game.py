@@ -1,5 +1,6 @@
 import pygame
-
+import time
+import random
 
 pygame.init()
 
@@ -63,6 +64,7 @@ while not game_over:
 message('Потрачено', red)
 
 pygame.display.update()
+time.sleep(2)
 pygame.quit()
 
 quit()
