@@ -14,15 +14,16 @@
 - Склонируйте репозиторий:  
 ``` git clone <название репозитория> ```
 - Установите и активируйте виртуальное окружение:  
-``` python -m venv venv ```  
-``` для windows: source venv/Scripts/activate ```
+```python -m venv venv ```  
 
-``` для mac os: source venv/bin/activate ```
+```windows: source venv/Scripts/activate ```
+
+```mac os: source venv/bin/activate ```
 - Установите зависимости из файла requirements.txt:
 ``` pip install -r requirements.txt ```
 - Перейдите в папку snake_beta.
 - Выполните команду:
-``` python game.p ```
+``` python game.py ```
 
 #### Автор
 Чугин Владислав
